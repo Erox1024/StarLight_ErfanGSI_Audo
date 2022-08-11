@@ -52,6 +52,7 @@ jobs:
               sudo sed -i '8c Aonly=false' url2GSI.sh
        - name: Download Rom/下载ROM & Generate A/B GSI/制作A/B ErfanGSI
          run: sudo ./ErfanGSIs/url2GSI.sh $ROM_URL $ROM_NAME 
+              ls /home/runner/work/StarLight_ErfanGSI_Audo/StarLight_ErfanGSI_Audo/ErfanGSIs/output
        
        - name: ZIP GSI /打包GSI
          run: |
