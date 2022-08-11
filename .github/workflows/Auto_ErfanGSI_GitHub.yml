@@ -41,7 +41,7 @@ jobs:
             sudo -E apt-get -qq install git openjdk-8-jdk wget
        
        - name: Clone Source Code
-         run: git clone --recurse-submodules https://github.com/laohan233/ErfanGSIs.git
+         run: git clone --recurse-submodules https://github.com/Erox1024/ErfanGSIs.git
        
        - name: Setting up ErfanGSI requirements
          run: |
@@ -51,9 +51,8 @@ jobs:
               sudo sed -i '7c AB=true' url2GSI.sh
               sudo sed -i '8c Aonly=false' url2GSI.sh
        - name: Download Rom/下载ROM & Generate A/B GSI/制作A/B ErfanGSI
-         run: sudo ./ErfanGSIs/url2GSI.sh $ROM_URL $ROM_NAME 
-              ls /home/runner/work/StarLight_ErfanGSI_Audo/StarLight_ErfanGSI_Audo/ErfanGSIs/output
-       
+        
+ run: sudo ./ErfanGSIs/url2GSI.sh $ROM_URL $ROM_NAME        
        - name: ZIP GSI /打包GSI
          run: |
               mkdir final
